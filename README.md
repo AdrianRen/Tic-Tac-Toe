@@ -2,7 +2,7 @@
 
 ## Project Requirements:
 
--   [ ] Use the supplied mockup files and HTML snippets to guide you in building a Tic Tac Toe game. You can use jQuery or plain JavaScript to complete this project. Don't use an already programmed Tic Tac Toe plugin or library.
+-   [x] Use the supplied mockup files and HTML snippets to guide you in building a Tic Tac Toe game. You can use jQuery or plain JavaScript to complete this project. Don't use an already programmed Tic Tac Toe plugin or library.
 -   [ ] When the page loads, the startup screen should appear.
 -   [ ] Add programming, so that when the player clicks the start button the start screen disappears, the board appears, and the game begins.
 -   [ ] Add the game play following these rules::
