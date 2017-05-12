@@ -39,7 +39,7 @@
         });
         // reset all the previous actived class
         $('li.players').removeClass('active');
-        // playGame();
+        playGame();
       });
   }());
 
@@ -47,7 +47,7 @@
    * Step 2
   **/
   let playGame = function () {
-    $('box').each(function() {
+    $('.box').each(function() {
       $(this).mouseenter(function() {
         /* Act on the event */
         if ($(playerOne).hasClass('active')) {
@@ -56,6 +56,30 @@
           this.style.backgroundImage = 'url("img/x.svg")'
         }
       });
+      $(this).mouseleave(function() {
+        /* Act on the event */
+        this.style.backgroundImage = 'none';
+      });
+    });
+    $('.box').click(function() {
+      /* Act on the event */
+      if($(playerOne).hasClass('active')){
+        if ($(this).hasClass('box-filled-1') === false && $(this).hasClass('box-filled-2') === false) {
+          $(this).addClass('box-filled-1');
+          this.style.backgroundImage = 'url("img/o.svg")';
+          $(this).unbind('mouseenter mouseleave');
+          // checkWin();
+          // nextTurn();
+        }
+      } else if($(playerTwo).hasClass("active")){
+        if ($(this).hasClass('box-filled-1') === false && $(this).hasClass('box-filled-2') === false) {
+          $(this).addClass('box-filled-2');
+          this.style.backgroundImage = 'url("img/x.svg")';
+          $(this).unbind('mouseenter mouseleave');
+          // checkWin();
+          // nextTurn();
+        } 
+      }
     });
   }
 }());
