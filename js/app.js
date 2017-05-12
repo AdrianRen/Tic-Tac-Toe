@@ -37,6 +37,25 @@
           $(this).removeClass('box-filled-1')
                  .removeClass('box-filled-2');
         });
+        // reset all the previous actived class
+        $('li.players').removeClass('active');
+        // playGame();
       });
   }());
+
+  /**
+   * Step 2
+  **/
+  let playGame = function () {
+    $('box').each(function() {
+      $(this).mouseenter(function() {
+        /* Act on the event */
+        if ($(playerOne).hasClass('active')) {
+          this.style.backgroundImage = 'url("img/o.svg")';
+        } else {
+          this.style.backgroundImage = 'url("img/x.svg")'
+        }
+      });
+    });
+  }
 }());
